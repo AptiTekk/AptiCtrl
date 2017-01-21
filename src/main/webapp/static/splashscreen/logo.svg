@@ -1,32 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 499.529 396.449" enable-background="new 0 0 499.529 396.449" xml:space="preserve">
 <g id="Underlay">
-	<path id="Background" fill="#E6E7E8" d="M66.528,396.449h212.887H475c12.152,0,22.275-8.673,24.528-20.165V57.19h-433V396.449z"/>
-	<path id="Header" fill="#939598" d="M475,0H255.862v57.19h243.667V20.164C497.275,8.672,487.152,0,475,0z"/>
+	<path fill="#E6E7E8" d="M474.529,396.449H92.195c-13.807,0-25-11.193-25-25V25c0-13.807,11.193-25,25-25h382.334
+		c13.807,0,25,11.193,25,25v346.449C499.529,385.256,488.336,396.449,474.529,396.449z"/>
 	<g>
-		<g id="Horizontal_Bars">
-			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="499.528" y1="110.764" x2="112.515" y2="110.764"/>
-			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="499.528" y1="169.268" x2="112.515" y2="169.268"/>
-			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="499.528" y1="227.772" x2="112.515" y2="228.057"/>
-			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="499.528" y1="286.276" x2="112.515" y2="286.276"/>
-			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="499.528" y1="344.78" x2="112.515" y2="344.78"/>
+		<g>
+			<rect x="210.579" y="25.32" fill="#D1D3D4" width="262.667" height="31.697"/>
+			<rect x="356.712" y="25.32" fill="#A7A9AC" width="14.916" height="31.697"/>
+			<rect x="210.579" y="25.32" fill="#BCBEC0" width="146.133" height="31.697"/>
 		</g>
-		<g id="Vertical_Bars">
-			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="332.94" y1="396.449" x2="332.94" y2="57.19"/>
-			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="219.519" y1="57.19" x2="219.519" y2="396.449"/>
-			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="389.651" y1="396.449" x2="389.651" y2="57.19"/>
-			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="276.23" y1="57.19" x2="276.23" y2="396.449"/>
-			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="162.808" y1="57.19" x2="162.808" y2="396.449"/>
-			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="446.36" y1="57.19" x2="446.36" y2="396.449"/>
+		<g>
+			<rect x="210.579" y="71.511" fill="#D1D3D4" width="262.667" height="31.697"/>
+			<rect x="300.776" y="71.511" fill="#A7A9AC" width="14.916" height="31.697"/>
+			<rect x="210.579" y="71.511" fill="#BCBEC0" width="90.197" height="31.697"/>
+		</g>
+		<g>
+			<rect x="210.579" y="117.702" fill="#D1D3D4" width="262.667" height="31.697"/>
+			<rect x="407.987" y="117.702" fill="#A7A9AC" width="14.916" height="31.697"/>
+			<rect x="210.579" y="117.702" fill="#BCBEC0" width="197.408" height="31.697"/>
 		</g>
 	</g>
-	<g id="Events">
-		<polygon fill="#A7A9AC" points="301.632,123.285 218.903,123.285 218.742,144.558 301.632,144.558 		"/>
-		<rect x="361.687" y="247.136" fill="#A7A9AC" width="114.303" height="21.274"/>
-		<polygon fill="#A7A9AC" points="219.519,306.228 161.695,306.228 161.409,327.503 219.519,327.503 		"/>
+	<g>
+		<rect x="311.348" y="345.459" fill="#BCBEC0" width="69.027" height="50.99"/>
+		<rect x="219.312" y="379.973" fill="#BCBEC0" width="69.027" height="16.476"/>
+		<rect x="403.384" y="299.441" fill="#BCBEC0" width="69.027" height="97.008"/>
 	</g>
+	<polygon fill="#A7A9AC" points="473.012,172.891 402.125,187.317 422.399,207.496 341.47,287.042 306.015,251.575 213.378,343.692 
+		230.036,360.445 305.968,284.951 341.305,320.312 439.128,224.178 458.823,243.79 	"/>
 </g>
 <g id="Overlay_1_">
 	<path opacity="0.1" fill="#414042" d="M332.94,0C308.319,0,52.39,0,52.39,0v396.449H475"/>
