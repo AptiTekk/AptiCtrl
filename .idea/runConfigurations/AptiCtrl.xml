@@ -7,6 +7,7 @@
     <module name="AptiCtrl" />
     <envs>
       <env name="RAYGUN_APIKEY" value="rMmd5yP+v01YmLU3ivhorA\=\=" />
+      <env name="HEROKU_API_KEY" value="10a19878-d245-46fd-9e87-77b520a3067c" />
     </envs>
     <method />
   </configuration>

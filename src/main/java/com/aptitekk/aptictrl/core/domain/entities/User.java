@@ -10,7 +10,10 @@ import com.aptitekk.aptictrl.core.util.EqualsHelper;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.io.Serializable;
 
 
@@ -24,51 +27,12 @@ public class User implements Serializable {
     @GeneratedValue
     private Long id;
 
-    public String emailAddress;
-
-    public String firstName;
-
-    public String lastName;
-
-    public String phoneNumber;
-
-    public String location;
+    public String username;
 
     public String hashedPassword;
 
     public Long getId() {
         return this.id;
-    }
-
-    public String getEmailAddress() {
-        return emailAddress;
-    }
-
-    public void setEmailAddress(String emailAddress) {
-        if (emailAddress != null)
-            emailAddress = emailAddress.toLowerCase();
-        this.emailAddress = emailAddress;
-    }
-
-    /**
-     * Determines if the user is the admin.
-     *
-     * @return True if the user is the admin, false otherwise.
-     */
-    public boolean isAdmin() {
-        return emailAddress.equalsIgnoreCase("admin");
-    }
-
-    /**
-     * Gets the full name of the user, or the email address if the first name is empty.
-     *
-     * @return The user's full name.
-     */
-    public String getFullName() {
-        if (firstName == null || firstName.isEmpty())
-            return getEmailAddress();
-        else
-            return firstName + (lastName == null ? "" : " " + lastName);
     }
 
     @Override
@@ -81,17 +45,13 @@ public class User implements Serializable {
 
         User other = (User) o;
 
-        return EqualsHelper.areEquals(emailAddress, other.emailAddress)
-                && EqualsHelper.areEquals(firstName, other.firstName)
-                && EqualsHelper.areEquals(lastName, other.lastName)
-                && EqualsHelper.areEquals(phoneNumber, other.phoneNumber)
-                && EqualsHelper.areEquals(location, other.location)
+        return EqualsHelper.areEquals(username, other.username)
                 && EqualsHelper.areEquals(hashedPassword, other.hashedPassword);
     }
 
     @Override
     public int hashCode() {
-        return EqualsHelper.calculateHashCode(emailAddress, firstName, lastName, phoneNumber, location, hashedPassword);
+        return EqualsHelper.calculateHashCode(username, hashedPassword);
     }
 
 }

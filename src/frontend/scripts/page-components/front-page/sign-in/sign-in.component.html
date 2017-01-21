@@ -1,13 +1,13 @@
 <!--
   ~ Copyright (C) 2016 AptiTekk, LLC. (https://AptiTekk.com/) - All Rights Reserved
-  ~ Unauthorized copying of any part of AptiBook, via any medium, is strictly prohibited.
+  ~ Unauthorized copying of any part of AptiCtrl, via any medium, is strictly prohibited.
   ~ Proprietary and confidential.
   -->
 
 <form id="loginForm" [formGroup]="signInFormGroup" (submit)="onSubmit()">
     <alert #loginAlert [severity]="'danger'"></alert>
 
-    <form-group [control]="signInFormGroup.controls['emailAddress']"
+    <form-group [control]="signInFormGroup.controls['username']"
                 [label]="'Username'"
                 [faIconName]="'user'"
                 [autoFocus]="true">

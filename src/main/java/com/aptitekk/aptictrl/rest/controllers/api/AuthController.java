@@ -59,7 +59,7 @@ public class AuthController extends APIControllerAbstract {
                                 return ok(modelMapper.map(user, UserDTO.class));
                             }
 
-                            return unauthorized("The Email Address or Password supplied was incorrect.");
+                            return unauthorized("The Username or Password supplied was incorrect.");
                         }
 
                         return badRequest("Decoded data could not be parsed.");

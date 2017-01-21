@@ -15,22 +15,20 @@ import javax.persistence.PersistenceException;
 @EntityRepository
 public class UserRepository extends EntityRepositoryAbstract<User> {
 
-    public static final String ADMIN_EMAIL_ADDRESS = "admin";
-
     /**
-     * Finds User Entity by its email address.
+     * Finds User Entity by its username.
      *
-     * @param emailAddress The email address of the User to search for.
-     * @return A User Entity with the specified email address, or null if one does not exist.
+     * @param username The username address of the User to search for.
+     * @return A User Entity with the specified username, or null if one does not exist.
      */
-    public User findByEmailAddress(String emailAddress) {
-        if (emailAddress == null) {
+    public User findByUsername(String username) {
+        if (username == null) {
             return null;
         }
         try {
             return entityManager
-                    .createQuery("SELECT u FROM User u WHERE u.emailAddress = :emailAddress", User.class)
-                    .setParameter("emailAddress", emailAddress.toLowerCase())
+                    .createQuery("SELECT u FROM User u WHERE u.username = :username", User.class)
+                    .setParameter("username", username.toLowerCase())
                     .getSingleResult();
         } catch (PersistenceException e) {
             return null;
@@ -38,21 +36,21 @@ public class UserRepository extends EntityRepositoryAbstract<User> {
     }
 
     /**
-     * Determines if the credentials are correct or not for the current Tenant.
+     * Determines if the credentials are correct.
      *
-     * @param emailAddress The email address of the user to check.
-     * @param password     The password of the user to check (raw).
+     * @param username The username of the user to check.
+     * @param password The password of the user to check (raw).
      * @return The User if the credentials are correct, or null if they are not.
      */
-    public User findUserWithCredentials(String emailAddress, String password) {
-        if (emailAddress == null || password == null) {
+    public User findUserWithCredentials(String username, String password) {
+        if (username == null || password == null) {
             return null;
         }
 
         try {
             User user = entityManager
-                    .createQuery("SELECT u FROM User u WHERE u.emailAddress = :emailAddress", User.class)
-                    .setParameter("emailAddress", emailAddress.toLowerCase())
+                    .createQuery("SELECT u FROM User u WHERE u.username = :username", User.class)
+                    .setParameter("username", username.toLowerCase())
                     .getSingleResult();
             if (user != null && user.hashedPassword != null) {
                 if (PasswordStorage.verifyPassword(password, user.hashedPassword))

@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016 AptiTekk, LLC. (https://AptiTekk.com/) - All Rights Reserved
- * Unauthorized copying of any part of AptiBook, via any medium, is strictly prohibited.
+ * Unauthorized copying of any part of AptiCtrl, via any medium, is strictly prohibited.
  * Proprietary and confidential.
  */
 
@@ -9,15 +9,22 @@
     height: 100%;
     position: fixed;
     z-index: 999;
-    border-right: 1px solid #ddd;
+    box-shadow: -5px 0 20px 0 #666;
 }
 
 #header {
-    padding: 10px 0;
+    padding: 7px 0;
     width: 275px;
+    height: 85px;
     background-color: #fff;
     box-shadow: #666 0 0 10px -2px;
     border-bottom-right-radius: 10px;
+}
+
+#logo > img {
+    width: 100%;
+    padding: 10px;
+    height: 70px;
 }
 
 #content {
@@ -46,9 +53,4 @@
 #sign-out > button:hover {
     background-color: #d9534f;
     color: white;
-}
-
-#logo > img {
-    width: 100%;
-    padding: 10px;
 }

@@ -1,0 +1,13 @@
+/*
+ * Copyright (C) 2016 AptiTekk, LLC. (https://AptiTekk.com/) - All Rights Reserved
+ * Unauthorized copying of any part of AptiCtrl, via any medium, is strictly prohibited.
+ * Proprietary and confidential.
+ */
+
+.heroku-app-panel .app-title{
+    margin-top: 0;
+}
+
+.heroku-app-panel .status-label {
+    margin-top: -30px;
+}

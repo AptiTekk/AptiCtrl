@@ -1,79 +1,47 @@
 <!--
   ~ Copyright (C) 2016 AptiTekk, LLC. (https://AptiTekk.com/) - All Rights Reserved
-  ~ Unauthorized copying of any part of AptiBook, via any medium, is strictly prohibited.
+  ~ Unauthorized copying of any part of AptiCtrl, via any medium, is strictly prohibited.
   ~ Proprietary and confidential.
   -->
 
 <div id="sidebar">
-	<div id="header">
-		<a href="#"
-		   [routerLink]="['', 'secure']"
-		   id="logo">
-			<img src="../../page-components/front-page/logo.svg"/>
-		</a>
-	</div>
-	<div id="content">
-		<accordian-navigation [canCollapse]="false">
-			<accordian-navigation [icon]="'calendar-check-o'"
-								  [label]="'Reservation Management'"
-								  [expanded]="true">
-				<accordian-navigation [link]="['', 'secure', 'management', 'pending']"
-									  [icon]="'hourglass-half'"
-									  [label]="'Pending'">
-				</accordian-navigation>
-				<accordian-navigation [link]="['', 'secure', 'management', 'approved']"
-									  [icon]="'calendar-check-o'"
-									  [label]="'Approved'">
-				</accordian-navigation>
-				<accordian-navigation [link]="['', 'secure', 'management', 'rejected']"
-									  [icon]="'calendar-times-o'"
-									  [label]="'Rejected'">
-				</accordian-navigation>
-				<accordian-navigation [link]="['', 'secure', 'management', 'calendar']"
-									  [icon]="'calendar'"
-									  [label]="'Calendar'">
-				</accordian-navigation>
-			</accordian-navigation>
-			<accordian-navigation [icon]="'cogs'"
-								  [label]="'AptiBook Configuration'">
-				<accordian-navigation [link]="['', 'secure', 'configuration', 'resources']"
-									  [icon]="'tags'"
-									  [label]="'Resources'">
-				</accordian-navigation>
-				<accordian-navigation [link]="['', 'secure', 'configuration', 'users']"
-									  [icon]="'user'"
-									  [label]="'Users'">
-				</accordian-navigation>
-				<accordian-navigation [link]="['', 'secure', 'configuration', 'permissions']"
-									  [icon]="'unlock'"
-									  [label]="'Permissions'">
-				</accordian-navigation>
-				<accordian-navigation [link]="['', 'secure', 'configuration', 'properties']"
-									  [icon]="'cog'"
-									  [label]="'Properties'">
-				</accordian-navigation>
-			</accordian-navigation>
-			<accordian-navigation [icon]="'user'"
-								  [label]="'Account'">
-				<accordian-navigation [link]="['', 'secure', 'my', 'account']"
-									  [icon]="'pencil'"
-									  [label]="'My Account'">
-				</accordian-navigation>
-				<accordian-navigation [link]="['', 'secure', 'my', 'notifications']"
-									  [icon]="'bell'"
-									  [label]="'My Notifications'">
-				</accordian-navigation>
-			</accordian-navigation>
-		</accordian-navigation>
-	</div>
-	<div id="sign-out">
-		<i class="fa fa-user"
-		   aria-hidden="true"></i>
-		{{user?.fullName}}
-		<button (click)="onSignOut()"
-				class="btn-none">
-			<i class="fa fa-sign-out"
-			   aria-hidden="true"></i>
-		</button>
-	</div>
+    <div id="header">
+        <a href="#"
+           [routerLink]="['', 'secure']"
+           id="logo">
+            <img src="../../page-components/front-page/logo.svg"/>
+        </a>
+    </div>
+    <div id="content">
+        <accordian-navigation [canCollapse]="false">
+            <accordian-navigation [link]="['', 'secure', 'dashboard']"
+                                  [icon]="'server'"
+                                  [label]="'Dashboard'">
+            </accordian-navigation>
+            <accordian-navigation [icon]="'cogs'"
+                                  [label]="'AptiCtrl Configuration'">
+                <accordian-navigation [link]="['', 'secure', 'configuration', 'properties']"
+                                      [icon]="'cog'"
+                                      [label]="'Properties'">
+                </accordian-navigation>
+            </accordian-navigation>
+            <accordian-navigation [icon]="'user'"
+                                  [label]="'Account'">
+                <accordian-navigation [link]="['', 'secure', 'my', 'account']"
+                                      [icon]="'pencil'"
+                                      [label]="'My Account'">
+                </accordian-navigation>
+            </accordian-navigation>
+        </accordian-navigation>
+    </div>
+    <div id="sign-out">
+        <i class="fa fa-user"
+           aria-hidden="true"></i>
+        {{user?.username}}
+        <button (click)="onSignOut()"
+                class="btn-none">
+            <i class="fa fa-sign-out"
+               aria-hidden="true"></i>
+        </button>
+    </div>
 </div>

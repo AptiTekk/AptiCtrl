@@ -5,19 +5,9 @@
 SET statement_timeout = 0;
 SET lock_timeout = 0;
 SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SET check_function_bodies = false;
-SET client_min_messages = warning;
-
---
--- Name: file; Type: TABLE; Schema: public; Tablespace: 
---
-
-CREATE TABLE file (
-  id BIGINT NOT NULL,
-  data bytea,
-  tenant_id BIGINT NOT NULL
-);
+SET standard_conforming_strings = ON;
+SET check_function_bodies = FALSE;
+SET client_min_messages = WARNING;
 
 --
 -- Name: hibernate_sequence; Type: SEQUENCE; Schema: public; 
@@ -37,10 +27,9 @@ CACHE 1;
 --
 
 CREATE TABLE property (
-  id BIGINT NOT NULL,
-  propertykey TEXT,
-  propertyvalue TEXT,
-  tenant_id BIGINT NOT NULL
+  id            BIGINT NOT NULL,
+  propertykey   TEXT,
+  propertyvalue TEXT
 );
 
 --
@@ -48,14 +37,9 @@ CREATE TABLE property (
 --
 
 CREATE TABLE "user" (
-  id BIGINT NOT NULL,
-  emailaddress TEXT,
-  firstname TEXT,
-  hashedpassword TEXT,
-  lastname TEXT,
-  location TEXT,
-  notificationtypesettings TEXT,
-  phonenumber TEXT
+  id             BIGINT NOT NULL,
+  username       TEXT,
+  hashedpassword TEXT
 );
 
 --

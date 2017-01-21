@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2016 AptiTekk, LLC. (https://AptiTekk.com/) - All Rights Reserved
- * Unauthorized copying of any part of AptiBook, via any medium, is strictly prohibited.
+ * Unauthorized copying of any part of AptiCtrl, via any medium, is strictly prohibited.
  * Proprietary and confidential.
  */
 
@@ -16,7 +16,7 @@
     font-family: "Droid Sans", sans-serif;
     z-index: 1000;
     background-color: #4272b7;
-    padding: 8px 10px 0;
+    padding-top: 8px;
     box-shadow: #aaa 0 10px 25px 0;
 }
 

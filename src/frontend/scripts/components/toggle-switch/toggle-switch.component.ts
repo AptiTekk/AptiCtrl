@@ -1,3 +1,9 @@
+/*
+ * Copyright (C) 2016 AptiTekk, LLC. (https://AptiTekk.com/) - All Rights Reserved
+ * Unauthorized copying of any part of AptiCtrl, via any medium, is strictly prohibited.
+ * Proprietary and confidential.
+ */
+
 import {Component, Input, forwardRef, Output, EventEmitter, AfterViewInit} from "@angular/core";
 import {NG_VALUE_ACCESSOR, ControlValueAccessor} from "@angular/forms";
 
