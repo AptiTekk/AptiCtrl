@@ -1,11 +1,6 @@
 import {ModuleWithProviders} from "@angular/core";
 import {RouterModule} from "@angular/router";
-import {
-    FrontPageComponent,
-    SignInComponent,
-    SecurePageComponent,
-    DashboardPageComponent,
-} from "../page-components";
+import {FrontPageComponent, SignInComponent, SecurePageComponent, DashboardPageComponent} from "../page-components";
 import {FrontPageGuard, SecureGuard} from "./guards";
 
 export const routes: ModuleWithProviders = RouterModule.forRoot([
@@ -16,20 +11,6 @@ export const routes: ModuleWithProviders = RouterModule.forRoot([
             {
                 path: 'dashboard',
                 component: DashboardPageComponent
-            },
-            {
-                path: 'configuration',
-                component: undefined,
-                children: [
-                    {
-                        path: 'properties',
-                        component: undefined
-                    },
-                    {
-                        path: '**',
-                        redirectTo: 'properties'
-                    }
-                ]
             },
             {
                 path: '**',
