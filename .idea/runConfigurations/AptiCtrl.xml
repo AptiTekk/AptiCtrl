@@ -1,0 +1,13 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="AptiCtrl" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="com.aptitekk.aptictrl.AptiCtrl" />
+    <option name="ACTIVE_PROFILES" value="development" />
+    <option name="ALTERNATIVE_JRE_PATH" />
+    <module name="AptiCtrl" />
+    <envs>
+      <env name="RAYGUN_APIKEY" value="rMmd5yP+v01YmLU3ivhorA\=\=" />
+    </envs>
+    <method />
+  </configuration>
+</component>
