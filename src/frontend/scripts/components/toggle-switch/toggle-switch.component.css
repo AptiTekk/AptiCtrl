@@ -1,0 +1,124 @@
+/*
+ * Copyright (C) 2016 AptiTekk, LLC. (https://AptiTekk.com/) - All Rights Reserved
+ * Unauthorized copying of any part of AptiBook, via any medium, is strictly prohibited.
+ * Proprietary and confidential.
+ */
+
+.checkbox label .switch,
+.checkbox-inline .switch {
+    margin-left: -20px;
+    margin-right: 5px;
+}
+
+.switch {
+    position: relative;
+    overflow: hidden;
+}
+
+.switch input[type="checkbox"] {
+    display: none;
+}
+
+.switch-group {
+    position: absolute;
+    width: 200%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: left 0.35s;
+    -webkit-transition: left 0.35s;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.switch.off .switch-group {
+    left: -100%;
+}
+
+.switch-on {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 50%;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+}
+
+.switch-off {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+}
+
+.switch-handle {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 100%;
+    width: 0;
+    border-width: 0 1px;
+}
+
+.switch.btn {
+    min-width: 59px;
+    min-height: 34px;
+}
+
+.switch-on.btn {
+    padding-right: 24px;
+}
+
+.switch-off.btn {
+    padding-left: 24px;
+}
+
+.switch.btn-lg {
+    min-width: 79px;
+    min-height: 45px;
+}
+
+.switch-on.btn-lg {
+    padding-right: 31px;
+}
+
+.switch-off.btn-lg {
+    padding-left: 31px;
+}
+
+.switch-handle.btn-lg {
+    width: 40px;
+}
+
+.switch.btn-sm {
+    min-width: 50px;
+    min-height: 30px;
+}
+
+.switch-on.btn-sm {
+    padding-right: 20px;
+}
+
+.switch-off.btn-sm {
+    padding-left: 20px;
+}
+
+.switch.btn-xs {
+    min-width: 35px;
+    min-height: 22px;
+}
+
+.switch-on.btn-xs {
+    padding-right: 12px;
+}
+
+.switch-off.btn-xs {
+    padding-left: 12px;
+}

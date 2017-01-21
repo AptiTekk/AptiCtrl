@@ -1,0 +1,67 @@
+/*
+ * Copyright (C) 2016 AptiTekk, LLC. (https://AptiTekk.com/) - All Rights Reserved
+ * Unauthorized copying of any part of AptiBook, via any medium, is strictly prohibited.
+ * Proprietary and confidential.
+ */
+
+#vertical-spacer {
+    display: table-cell;
+    vertical-align: middle;
+    background: url('background.png');
+}
+
+#horizontal-spacer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#wrapper {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+#content-row {
+    padding-bottom: 70px;
+}
+
+#logo-row {
+    padding: 15px 0;
+}
+
+#logo-container img {
+    width: 100%;
+}
+
+#content-container, #logo-container {
+    box-shadow: #aaa 0 0 10px 0;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#slug-container {
+    border: 1px dotted #ddd;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+
+    #logo-row {
+        padding: 15px;
+    }
+
+    #content-row {
+        padding: 15px 15px 70px;
+        min-height: calc(100vh - 96px - 50px);
+    }
+
+    #logo-container {
+        padding: 15px;
+    }
+
+}

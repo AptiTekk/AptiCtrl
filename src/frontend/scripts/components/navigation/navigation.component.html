@@ -1,0 +1,31 @@
+<!--
+  ~ Copyright (C) 2016 AptiTekk, LLC. (https://AptiTekk.com/) - All Rights Reserved
+  ~ Unauthorized copying of any part of AptiBook, via any medium, is strictly prohibited.
+  ~ Proprietary and confidential.
+  -->
+
+<ul class="nav nav-pills"
+	[class.nav-stacked]="!horizontal"
+	*ngIf="links">
+	<li *ngFor="let link of links"
+		[routerLinkActive]="'active'"
+		[routerLinkActiveOptions]="{ exact: link.exact }">
+		<a [routerLink]="link.path">
+			<span><i class="fa fa-{{link.icon}}"></i></span>
+			{{link.label}}
+		</a>
+	</li>
+</ul>
+
+<ul class="nav nav-pills"
+	[class.nav-stacked]="!horizontal"
+	*ngIf="!links && navigationLinkComponents">
+	<li *ngFor="let linkComponent of navigationLinkComponents"
+		[class.active]="linkComponent.active">
+		<a (click)="linkComponent.selected.emit()"
+		   [style.cursor]="'pointer'">
+			<span><i class="fa fa-{{linkComponent.icon}}"></i></span>
+			{{linkComponent.label}}
+		</a>
+	</li>
+</ul>

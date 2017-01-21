@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!--
+  ~ Copyright (C) 2016 AptiTekk, LLC. (https://AptiTekk.com/) - All Rights Reserved
+  ~ Unauthorized copying of any part of AptiBook, via any medium, is strictly prohibited.
+  ~ Proprietary and confidential.
+  -->
+
+<html>
+<head>
+    <title>AptiCtrl</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1"/>
+
+    <base href="/"/>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="static/favicons/apple-touch-icon.png">
+    <link rel="icon"
+          type="image/png"
+          href="static/favicons/favicon-32x32.png"
+          sizes="32x32">
+    <link rel="icon"
+          type="image/png"
+          href="static/favicons/favicon-194x194.png"
+          sizes="194x194">
+    <link rel="icon"
+          type="image/png"
+          href="static/favicons/android-chrome-192x192.png"
+          sizes="192x192">
+    <link rel="icon"
+          type="image/png"
+          href="static/favicons/favicon-16x16.png"
+          sizes="16x16">
+    <link rel="manifest"
+          href="static/favicons/manifest.json">
+    <link rel="mask-icon"
+          href="static/favicons/safari-pinned-tab.svg"
+          color="#4272b7">
+    <meta name="theme-color"
+          content="#ffffff">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans|Roboto:300,400|Ubuntu"
+          rel="stylesheet">
+
+    <!--suppress CommaExpressionJS -->
+    <script type="text/javascript">
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46481658-2', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+    <style type="text/css">
+        body > app:empty {
+            background-color: rgba(66, 114, 183, 0.3);
+        }
+
+        #splashscreen {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity linear 0.5s;
+        }
+
+        app:empty + #splashscreen {
+            opacity: 1;
+        }
+
+        #splashscreen-background {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: url('static/splashscreen/background.jpg') no-repeat bottom center;
+            background-size: cover;
+
+            z-index: 10000;
+
+            animation: fadein 1s;
+        }
+
+        #splashscreen-color-overlay {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            z-index: 10001;
+
+            background-color: rgba(66, 114, 183, 0.3);
+        }
+
+        #splashscreen-foreground {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            z-index: 10002;
+
+            background: url('static/splashscreen/logo.svg') no-repeat center center;
+            background-size: 15% !important;
+
+            animation: fadein 1s;
+        }
+
+        @media (max-width: 767px) {
+
+            #splashscreen-foreground {
+                background-size: 50% !important;
+            }
+
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+<app></app>
+
+<div id="splashscreen">
+    <div id="splashscreen-background">
+    </div>
+    <div id="splashscreen-color-overlay">
+    </div>
+    <div id="splashscreen-foreground">
+    </div>
+</div>
+<script type="text/javascript"
+        src="/packed/scripts/polyfills.bundle.js"></script>
+<script type="text/javascript"
+        src="/packed/scripts/vendor.bundle.js"></script>
+<script type="text/javascript"
+        src="/packed/scripts/main.bundle.js"></script>
+</body>
+</html>

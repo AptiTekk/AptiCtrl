@@ -1,0 +1,23 @@
+<!--
+  ~ Copyright (C) 2016 AptiTekk, LLC. (https://AptiTekk.com/) - All Rights Reserved
+  ~ Unauthorized copying of any part of AptiBook, via any medium, is strictly prohibited.
+  ~ Proprietary and confidential.
+  -->
+
+<div class="navigation-block"
+	 *ngIf="label || icon"
+	 [class.collapsible]="canCollapse"
+	 [class.expanded]="expanded || !canCollapse"
+	 [class.collapsed]="!expanded && canCollapse"
+	 [routerLink]="link ? link : false"
+	 [routerLinkActive]="'active'"
+	 (click)="onClick()">
+	<i *ngIf="icon"
+	   class="fa fa-{{icon}}"></i> {{label ? label : ''}}
+</div>
+<div class="navigation-children"
+	 [class.expanded]="expanded || !canCollapse"
+	 [class.collapsed]="!expanded && canCollapse"
+	 [class.root]="!parent">
+	<ng-content></ng-content>
+</div>

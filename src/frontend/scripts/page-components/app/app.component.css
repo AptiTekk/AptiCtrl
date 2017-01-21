@@ -1,0 +1,176 @@
+/*
+ * Copyright (C) 2016 AptiTekk, LLC. (https://AptiTekk.com/) - All Rights Reserved
+ * Unauthorized copying of any part of AptiBook, via any medium, is strictly prohibited.
+ * Proprietary and confidential.
+ */
+
+/* Container, Column, and Row Styling */
+
+.container-fluid {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1,
+.col-xs-2, .col-sm-2, .col-md-2, .col-lg-2,
+.col-xs-3, .col-sm-3, .col-md-3, .col-lg-3,
+.col-xs-4, .col-sm-4, .col-md-4, .col-lg-4,
+.col-xs-5, .col-sm-5, .col-md-5, .col-lg-5,
+.col-xs-6, .col-sm-6, .col-md-6, .col-lg-6,
+.col-xs-7, .col-sm-7, .col-md-7, .col-lg-7,
+.col-xs-8, .col-sm-8, .col-md-8, .col-lg-8,
+.col-xs-9, .col-sm-9, .col-md-9, .col-lg-9,
+.col-xs-10, .col-sm-10, .col-md-10, .col-lg-10,
+.col-xs-11, .col-sm-11, .col-md-11, .col-lg-11,
+.col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Link and Text Styling */
+
+.app a {
+    color: #4272b7;
+}
+
+.app .text-primary {
+    color: #4272b7;
+}
+
+.no-select {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently not supported by any browser */
+}
+
+/* Nav Styling */
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    background-color: #4272b7;
+}
+
+/* Button Styling */
+
+.app .btn-primary,
+.app .pagination > .active > a,
+.app .pagination > .active > span,
+.app .pagination > .active > a:hover,
+.app .pagination > .active > span:hover,
+.app .pagination > .active > a:focus,
+.app .pagination > .active > span:focus,
+.app .btn-primary.disabled:hover,
+.app .btn-primary[disabled]:hover,
+.app fieldset[disabled] .btn-primary:hover,
+.app .btn-primary.disabled:focus,
+.app .btn-primary[disabled]:focus,
+.app fieldset[disabled] .btn-primary:focus,
+.app .btn-primary.disabled.focus,
+.app .btn-primary[disabled].focus,
+.app fieldset[disabled] .btn-primary.focus {
+    background-color: #4272b7;
+    border-color: #39629C;
+}
+
+.app .btn-primary:hover {
+    background-color: #39629C;
+    border-color: #39629C;
+}
+
+.app .btn:focus {
+    outline: none;
+}
+
+.app .btn.btn-large {
+    font-size: 30px;
+}
+
+.btn-none {
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+/* Select Box Styling */
+
+.app select.big-select {
+    display: block;
+    font-size: 20px;
+    width: 100%;
+    border-radius: 4px;
+    padding: 0 12px;
+    margin-bottom: 10px;
+}
+
+.app select.big-select:disabled {
+    background-color: #eee;
+}
+
+.app select.form-control {
+    height: 34px !important;
+}
+
+/* Switch Styling */
+
+.app .bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary,
+.app .bootstrap-switch .bootstrap-switch-handle-off.bootstrap-switch-primary {
+    background: #4272b7;
+}
+
+.app .ui-state-highlight,
+.app .ui-widget-content .ui-state-highlight,
+.app .ui-widget-header .ui-state-highlight {
+    background-color: #4272b7;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 16px;
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border: 4px solid transparent;
+    border-radius: 8px;
+    background-clip: content-box;
+}
+
+/* Spacing Helpers */
+
+.full-height {
+    height: calc(100vh - 50px);
+}
+
+.full-height-breadcrumb {
+    height: calc(100vh - 50px - 60px);
+}
+
+.no-padding {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Breadcrumbs */
+
+ol.breadcrumb {
+    height: 60px;
+    padding: 15px 40px;
+    margin-bottom: 0;
+    font-size: 20px;
+    box-shadow: inset 0 -10px 20px -20px black;
+    background-color: #fff;
+}

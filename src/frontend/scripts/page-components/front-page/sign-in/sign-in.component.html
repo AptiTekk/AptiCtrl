@@ -1,0 +1,25 @@
+<!--
+  ~ Copyright (C) 2016 AptiTekk, LLC. (https://AptiTekk.com/) - All Rights Reserved
+  ~ Unauthorized copying of any part of AptiBook, via any medium, is strictly prohibited.
+  ~ Proprietary and confidential.
+  -->
+
+<form id="loginForm" [formGroup]="signInFormGroup" (submit)="onSubmit()">
+    <alert #loginAlert [severity]="'danger'"></alert>
+
+    <form-group [control]="signInFormGroup.controls['emailAddress']"
+                [label]="'Email Address'"
+                [faIconName]="'at'"
+                [autoFocus]="true">
+    </form-group>
+
+    <form-group [control]="signInFormGroup.controls['password']"
+                [label]="'Password'"
+                [faIconName]="'asterisk'"
+                [inputType]="'password'">
+    </form-group>
+
+    <div class="form-group">
+        <button class="btn btn-primary btn-large btn-block" [disabled]="signInFormGroup.invalid">Sign In</button>
+    </div>
+</form>

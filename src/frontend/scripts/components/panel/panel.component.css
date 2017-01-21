@@ -1,0 +1,28 @@
+/*
+ * Copyright (C) 2016 AptiTekk, LLC. (https://AptiTekk.com/) - All Rights Reserved
+ * Unauthorized copying of any part of AptiBook, via any medium, is strictly prohibited.
+ * Proprietary and confidential.
+ */
+
+.panel.panel-primary {
+    box-shadow: #666 0 0 10px -2px;
+    border: none;
+}
+
+.panel.panel-primary .panel-heading {
+    background-color: #4272b7;
+    box-shadow: #666 0 5px 10px -5px;
+    color: white;
+    border: none;
+}
+
+.panel.panel-primary .panel-heading a:after {
+    color: white;
+}
+
+/* Scrollbar */
+
+.panel ::-webkit-scrollbar {
+    width: 16px;
+    background-color: transparent;
+}

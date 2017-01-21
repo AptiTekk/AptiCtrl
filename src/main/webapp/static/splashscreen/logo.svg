@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 499.529 396.449" enable-background="new 0 0 499.529 396.449" xml:space="preserve">
+<g id="Underlay">
+	<path id="Background" fill="#E6E7E8" d="M66.528,396.449h212.887H475c12.152,0,22.275-8.673,24.528-20.165V57.19h-433V396.449z"/>
+	<path id="Header" fill="#939598" d="M475,0H255.862v57.19h243.667V20.164C497.275,8.672,487.152,0,475,0z"/>
+	<g>
+		<g id="Horizontal_Bars">
+			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="499.528" y1="110.764" x2="112.515" y2="110.764"/>
+			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="499.528" y1="169.268" x2="112.515" y2="169.268"/>
+			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="499.528" y1="227.772" x2="112.515" y2="228.057"/>
+			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="499.528" y1="286.276" x2="112.515" y2="286.276"/>
+			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="499.528" y1="344.78" x2="112.515" y2="344.78"/>
+		</g>
+		<g id="Vertical_Bars">
+			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="332.94" y1="396.449" x2="332.94" y2="57.19"/>
+			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="219.519" y1="57.19" x2="219.519" y2="396.449"/>
+			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="389.651" y1="396.449" x2="389.651" y2="57.19"/>
+			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="276.23" y1="57.19" x2="276.23" y2="396.449"/>
+			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="162.808" y1="57.19" x2="162.808" y2="396.449"/>
+			<line fill="none" stroke="#BCBEC0" stroke-miterlimit="10" x1="446.36" y1="57.19" x2="446.36" y2="396.449"/>
+		</g>
+	</g>
+	<g id="Events">
+		<polygon fill="#A7A9AC" points="301.632,123.285 218.903,123.285 218.742,144.558 301.632,144.558 		"/>
+		<rect x="361.687" y="247.136" fill="#A7A9AC" width="114.303" height="21.274"/>
+		<polygon fill="#A7A9AC" points="219.519,306.228 161.695,306.228 161.409,327.503 219.519,327.503 		"/>
+	</g>
+</g>
+<g id="Overlay_1_">
+	<path opacity="0.1" fill="#414042" d="M332.94,0C308.319,0,52.39,0,52.39,0v396.449H475"/>
+	<g id="Overlay">
+		<path fill="#4272B7" d="M200.351,261.374c2.911-9.137,5.762-18.474,8.578-27.92c0.535-1.795,1.069-3.595,1.602-5.398
+			C228.579,167,245.398,102.086,267.89,57.19C285.177,22.684,305.814,0,332.94,0h-38.469H25C11.193,0,0,11.193,0,25v346.449
+			c0,13.807,11.193,25,25,25h59.1h2.023h10.631h6.981C149.137,396.449,176.735,335.486,200.351,261.374z"/>
+		<path fill="#3C629A" d="M121.023,12.5H93.992L14.5,202.216l69.6,194.233h2.023h10.631h6.981c45.402,0,73-60.963,96.616-135.075
+			c2.911-9.137,5.762-18.474,8.578-27.92c0.535-1.795,1.069-3.595,1.602-5.398l-9.303-25.969L121.023,12.5z"/>
+		<g>
+			<g>
+				<defs>
+					<rect id="SVGID_1_" x="14.501" y="12.502" width="186.727" height="189.716"/>
+				</defs>
+				<clipPath id="SVGID_2_">
+					<use xlink:href="#SVGID_1_"  overflow="visible"/>
+				</clipPath>
+				<polygon clip-path="url(#SVGID_2_)" fill="#D1D3D4" points="94.955,12.501 144.711,130.699 61.794,153.565 153.937,153.565 
+					201.229,202.218 120.776,12.501 				"/>
+				<polygon clip-path="url(#SVGID_2_)" fill="#FFFFFF" points="94.955,12.501 14.501,202.218 61.794,153.565 120.776,12.501 				
+					"/>
+			</g>
+		</g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+	<g>
+	</g>
+</g>
+</svg>

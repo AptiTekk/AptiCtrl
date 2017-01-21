@@ -1,0 +1,34 @@
+/*
+ * Copyright (C) 2016 AptiTekk, LLC. (https://AptiTekk.com/) - All Rights Reserved
+ * Unauthorized copying of any part of AptiBook, via any medium, is strictly prohibited.
+ * Proprietary and confidential.
+ */
+
+.spacer {
+    height: 50px;
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    bottom: 0;
+    font-family: "Droid Sans", sans-serif;
+    z-index: 1000;
+    background-color: #4272b7;
+    padding: 8px 10px 0;
+    box-shadow: #aaa 0 10px 25px 0;
+}
+
+.footer p {
+    margin-top: 8px;
+    color: #fff;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer a:hover, .footer a:active, .footer a:focus {
+    color: #f1f1f1;
+}
