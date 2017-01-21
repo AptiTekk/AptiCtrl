@@ -26,9 +26,25 @@ export class HerokuAppPageComponent implements OnInit {
                 let appName: string = params['appName'];
 
                 if (appName) {
-                    this.herokuService.getAppByName(appName).subscribe(app => this.app = app);
+                    this.herokuService.getAppByName(appName).subscribe(app => {
+                        this.app = app;
+                        this.herokuService
+                            .isAppInMaintenanceMode(app)
+                            .subscribe(
+                                status => app.maintenanceModeStatus = status
+                            )
+                    });
                 }
             }
         )
+    }
+
+    onVisitAppUrl() {
+        let win = window.open(this.app.webUrl, '_blank');
+        if (win) {
+            win.focus();
+        } else {
+            alert('The App URL could not be opened. Please allow popups for this website.');
+        }
     }
 }

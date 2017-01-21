@@ -3,7 +3,26 @@
   <component name="ProjectCodeStyleSettingsManager">
     <option name="PER_PROJECT_SETTINGS">
       <value>
+        <option name="HTML_ATTRIBUTE_WRAP" value="2" />
+        <option name="HTML_TEXT_WRAP" value="0" />
+        <option name="HTML_ALIGN_TEXT" value="true" />
         <option name="HTML_DO_NOT_INDENT_CHILDREN_OF" value="html,body" />
+        <option name="HTML_ENFORCE_QUOTES" value="true" />
+        <Properties>
+          <option name="SPACES_AROUND_KEY_VALUE_DELIMITER" value="true" />
+          <option name="KEEP_BLANK_LINES" value="true" />
+        </Properties>
+        <codeStyleSettings language="HTML">
+          <indentOptions>
+            <option name="USE_TAB_CHARACTER" value="true" />
+            <option name="KEEP_INDENTS_ON_EMPTY_LINES" value="true" />
+          </indentOptions>
+        </codeStyleSettings>
+        <codeStyleSettings language="JAVA">
+          <option name="LINE_COMMENT_AT_FIRST_COLUMN" value="false" />
+          <option name="LINE_COMMENT_ADD_SPACE" value="true" />
+          <option name="KEEP_FIRST_COLUMN_COMMENT" value="false" />
+        </codeStyleSettings>
       </value>
     </option>
     <option name="USE_PER_PROJECT_SETTINGS" value="true" />

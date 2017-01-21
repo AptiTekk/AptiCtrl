@@ -5,44 +5,49 @@
   -->
 
 <div class="container-fluid">
-
-    <ol class="breadcrumb">
-        <li class="active">Dashboard</li>
-    </ol>
-
-    <div class="page-header">
-        <h2>Heroku Apps</h2>
-    </div>
-
-    <div class="row">
-        <div class="col-xs-12 col-md-6 col-lg-4" *ngFor="let app of apps">
-            <panel class="heroku-app-panel">
-                <panel-body>
-                    <h4 class="app-title">{{app.name}}</h4>
-                    <span *ngIf="app.maintenanceModeStatus === false"
-                          class="label label-success pull-right status-label">
+	
+	<ol class="breadcrumb">
+		<li class="active">Dashboard</li>
+	</ol>
+	
+	<div class="page-header">
+		<h2>Heroku Apps</h2>
+	</div>
+	
+	<div class="row">
+		<div class="col-xs-12 col-md-6 col-lg-4"
+			 *ngFor="let app of apps">
+			<panel class="heroku-app-panel">
+				<panel-body>
+					<h4 class="app-title">{{app.name}}</h4>
+					<span *ngIf="app.maintenanceModeStatus === false"
+						  class="label label-success pull-right status-label">
                         Live
                     </span>
-                    <span *ngIf="app.maintenanceModeStatus === true"
-                          class="label label-warning pull-right status-label">
+					<span *ngIf="app.maintenanceModeStatus === true"
+						  class="label label-warning pull-right status-label">
                         Maintenance Mode Enabled
                     </span>
-                    <hr/>
-                    <form-group [label]="'URL'"
-                                [value]="app.webUrl"
-                                [readOnly]="true">
-                    </form-group>
-                    <form-group [label]="'Last Release Date'"
-                                [value]="app.releasedAt | date:'EEEE, MMMM dd, yyyy, h:mm:ss a'"
-                                [readOnly]="true">
-                    </form-group>
-                </panel-body>
-                <panel-footer>
-                    <button class="btn btn-primary" [routerLink]="['', 'secure', 'app', app.name]">Manage App</button>
-                    <button class="btn btn-default" (click)="onVisitAppUrl(app)">Visit App</button>
-                </panel-footer>
-            </panel>
-        </div>
-    </div>
+					<hr/>
+					<form-group [label]="'URL'"
+								[value]="app.webUrl"
+								[readOnly]="true">
+					</form-group>
+					<form-group [label]="'Last Release Date'"
+								[value]="app.releasedAt | date:'EEEE, MMMM dd, yyyy, h:mm:ss a'"
+								[readOnly]="true">
+					</form-group>
+				</panel-body>
+				<panel-footer>
+					<button class="btn btn-primary"
+							[routerLink]="['', 'secure', 'app', app.name]">Manage App
+					</button>
+					<button class="btn btn-default"
+							(click)="onVisitAppUrl(app)">Visit App
+					</button>
+				</panel-footer>
+			</panel>
+		</div>
+	</div>
 
 </div>

@@ -4,10 +4,46 @@
   ~ Proprietary and confidential.
   -->
 <div class="container-fluid">
-
-    <ol class="breadcrumb">
-        <li class="active">Heroku Apps</li>
-        <li class="active">{{app?.name}}</li>
-    </ol>
-
+	
+	<ol class="breadcrumb">
+		<li class="active">Heroku Apps</li>
+		<li class="active">{{app?.name}}</li>
+	</ol>
+	
+	<div class="page-header">
+		<h2>{{app?.name}}
+			<span *ngIf="app?.maintenanceModeStatus === false"
+				  class="label label-success"
+				  style="margin-left: 20px">
+                Live
+            </span>
+			<span *ngIf="app?.maintenanceModeStatus === true"
+				  class="label label-warning"
+				  style="margin-left: 20px">
+                Maintenance Mode Enabled
+            </span>
+		</h2>
+	</div>
+	
+	<div class="row"
+		 *ngIf="app">
+		<div class="col-xs-12">
+			<div class="btn-toolbar">
+				<button class="btn btn-default"
+						(click)="onVisitAppUrl()">Visit App
+				</button>
+			</div>
+			<hr/>
+		</div>
+		<div class="col-xs-12 col-md-6">
+			<form-group [label]="'URL'"
+						[value]="app.webUrl"
+						[readOnly]="true">
+			</form-group>
+			<form-group [label]="'Last Release Date'"
+						[value]="app.releasedAt | date:'EEEE, MMMM dd, yyyy, h:mm:ss a'"
+						[readOnly]="true">
+			</form-group>
+		</div>
+	</div>
 </div>
