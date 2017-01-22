@@ -3,7 +3,6 @@
  * Unauthorized copying of any part of AptiCtrl, via any medium, is strictly prohibited.
  * Proprietary and confidential.
  */
-
 import {Component, ViewChild, AfterViewInit} from "@angular/core";
 import {Router, ActivatedRoute} from "@angular/router";
 import {AuthService} from "../../../services/singleton/auth.service";
@@ -31,7 +30,7 @@ export class SignInComponent implements AfterViewInit {
                 private loaderService: LoaderService) {
 
         this.signInFormGroup = formBuilder.group({
-            emailAddress: [null, Validators.required],
+            username: [null, Validators.required],
             password: [null, Validators.required]
         });
     }
@@ -49,7 +48,7 @@ export class SignInComponent implements AfterViewInit {
     onSubmit() {
         this.loaderService.startLoading();
         this.authService
-            .signIn(this.signInFormGroup.controls['emailAddress'].value, this.signInFormGroup.controls['password'].value)
+            .signIn(this.signInFormGroup.controls['username'].value, this.signInFormGroup.controls['password'].value)
             .subscribe(
                 successful => {
                     if (successful)
