@@ -6,9 +6,9 @@
 import {Component, OnInit} from "@angular/core";
 import {APIService} from "../../../services/singleton/api.service";
 import {AuthService} from "../../../services/singleton/auth.service";
-import {User} from "../../../models/user.model";
 import {HerokuService} from "../../../services/singleton/heroku.service";
 import {HerokuApp} from "../../../models/heroku-app.model";
+import {LoaderService} from "../../../services/singleton/loader.service";
 
 @Component({
     selector: 'dashboard-page',
@@ -17,30 +17,24 @@ import {HerokuApp} from "../../../models/heroku-app.model";
 })
 export class DashboardPageComponent implements OnInit {
 
-    currentUser: User;
     private apps: HerokuApp[];
 
     constructor(protected apiService: APIService,
                 private authService: AuthService,
-                private herokuService: HerokuService) {
+                private herokuService: HerokuService,
+                private loaderService: LoaderService) {
     }
 
     ngOnInit(): void {
-        this.authService.getUser().subscribe(user => this.currentUser = user);
+        this.loaderService.startLoading();
         this.herokuService.getApps().subscribe(apps => {
             this.apps = apps;
-            this.apps.forEach(app => {
-                this.herokuService
-                    .isAppInMaintenanceMode(app)
-                    .subscribe(
-                        status => app.maintenanceModeStatus = status
-                    )
-            });
+            this.loaderService.stopLoading();
         });
     }
 
     onVisitAppUrl(app: HerokuApp) {
-        let win = window.open(app.webUrl, '_blank');
+        let win = window.open(app.web_url, '_blank');
         if (win) {
             win.focus();
         } else {

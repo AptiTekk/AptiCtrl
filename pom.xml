@@ -146,13 +146,9 @@
 
         <!-- REST -->
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.github.scribejava</groupId>
-            <artifactId>scribejava-apis</artifactId>
-            <version>3.0.0</version>
+            <groupId>com.mashape.unirest</groupId>
+            <artifactId>unirest-java</artifactId>
+            <version>1.4.9</version>
         </dependency>
         <dependency>
             <groupId>org.modelmapper</groupId>
@@ -236,24 +232,6 @@
             <version>RELEASE</version>
         </dependency>
         <!-- End Utils -->
-
-        <!-- Heroku -->
-        <dependency>
-            <groupId>com.heroku.api</groupId>
-            <artifactId>heroku-api</artifactId>
-            <version>0.16</version>
-        </dependency>
-        <dependency>
-            <groupId>com.heroku.api</groupId>
-            <artifactId>heroku-json-jackson</artifactId>
-            <version>0.16</version>
-        </dependency>
-        <dependency>
-            <groupId>com.heroku.api</groupId>
-            <artifactId>heroku-http-apache</artifactId>
-            <version>0.16</version>
-        </dependency>
-        <!-- End Heroku -->
 
     </dependencies>
 

@@ -3,44 +3,74 @@
  * Unauthorized copying of any part of AptiCtrl, via any medium, is strictly prohibited.
  * Proprietary and confidential.
  */
-
-import {HerokuDomain} from "./heroku-domain.model";
 export interface HerokuApp {
 
-    id?: string;
+    id: string;
 
-    name?: string;
+    archived_at?: any;
 
-    domainName?: HerokuDomain;
+    buildpack_provided_description: string;
 
-    createdAt?: string;
+    build_stack: HerokuAppBuildStack;
 
-    createStatus?: string;
+    created_at: Date;
 
-    ownerEmail?: string;
+    git_url: string;
 
-    webUrl?: string;
+    maintenance: boolean;
 
-    stack?: string;
+    name: string;
 
-    requestedStack?: string;
+    owner: HerokuAppOwner;
 
-    repoMigrateStatus?: string;
+    region: HerokuAppRegion;
 
-    gitUrl?: string;
+    organization?: any;
 
-    buildpackProvidedDescription?: string;
+    space?: any;
 
-    releasedAt?: Date;
+    released_at: Date;
 
-    slugSize?: number;
+    repo_size: number;
 
-    repoSize?: number;
+    slug_size: number;
 
-    dynos?: number;
+    stack: HerokuAppStack;
 
-    workers?: number;
+    updated_at: Date;
 
-    maintenanceModeStatus?: boolean;
+    web_url: string;
+
+}
+
+export interface HerokuAppBuildStack {
+
+    id: string;
+
+    name: string;
+
+}
+
+export interface HerokuAppOwner {
+
+    id: string;
+
+    email: string;
+
+}
+
+export interface HerokuAppRegion {
+
+    id: string;
+
+    name: string;
+
+}
+
+export interface HerokuAppStack {
+
+    id: string;
+
+    name: string;
 
 }

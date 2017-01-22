@@ -7,44 +7,69 @@ import {Component, OnInit} from "@angular/core";
 import {ActivatedRoute} from "@angular/router";
 import {HerokuApp} from "../../../models/heroku-app.model";
 import {HerokuService} from "../../../services/singleton/heroku.service";
+import {HerokuRelease} from "../../../models/heroku-release.model";
+import {LoaderService} from "../../../services/singleton/loader.service";
 
 @Component({
     selector: 'heroku-app-page',
-    templateUrl: 'heroku-app-page.component.html'
+    templateUrl: 'heroku-app-page.component.html',
+    styleUrls: ['heroku-app-page.component.css']
 })
 export class HerokuAppPageComponent implements OnInit {
 
     app: HerokuApp;
+    releases: HerokuRelease[];
 
     constructor(private activatedRoute: ActivatedRoute,
-                private herokuService: HerokuService) {
+                private herokuService: HerokuService,
+                private loaderService: LoaderService) {
     }
 
     ngOnInit(): void {
+        this.fetchApp();
+    }
+
+    private fetchApp() {
+        this.loaderService.startLoading();
         this.activatedRoute.params.subscribe(
             params => {
                 let appName: string = params['appName'];
 
                 if (appName) {
-                    this.herokuService.getAppByName(appName).subscribe(app => {
-                        this.app = app;
-                        this.herokuService
-                            .isAppInMaintenanceMode(app)
-                            .subscribe(
-                                status => app.maintenanceModeStatus = status
-                            )
-                    });
+                    this.herokuService.getAppByName(appName).subscribe(
+                        app => {
+                            this.app = app;
+                            this.herokuService
+                                .getAppReleases(appName)
+                                .subscribe(
+                                    releases => {
+                                        this.releases = releases.reverse();
+                                        this.loaderService.stopLoading();
+                                    }
+                                )
+                        });
                 }
             }
         )
     }
 
     onVisitAppUrl() {
-        let win = window.open(this.app.webUrl, '_blank');
+        let win = window.open(this.app.web_url, '_blank');
         if (win) {
             win.focus();
         } else {
             alert('The App URL could not be opened. Please allow popups for this website.');
         }
+    }
+
+    onToggleMaintenanceMode() {
+        this.herokuService
+            .setAppMaintenanceModeEnabled(this.app, !this.app.maintenance)
+            .subscribe(
+                response => {
+                    this.herokuService.fetchApps();
+                    this.fetchApp();
+                }
+            )
     }
 }

@@ -12,12 +12,12 @@
 	
 	<div class="page-header">
 		<h2>{{app?.name}}
-			<span *ngIf="app?.maintenanceModeStatus === false"
+			<span *ngIf="!app?.maintenance"
 				  class="label label-success"
 				  style="margin-left: 20px">
                 Live
             </span>
-			<span *ngIf="app?.maintenanceModeStatus === true"
+			<span *ngIf="app?.maintenance"
 				  class="label label-warning"
 				  style="margin-left: 20px">
                 Maintenance Mode Enabled
@@ -30,20 +30,37 @@
 		<div class="col-xs-12">
 			<div class="btn-toolbar">
 				<button class="btn btn-default"
-						(click)="onVisitAppUrl()">Visit App
+						(click)="onVisitAppUrl()">
+					Visit App
+				</button>
+				<button class="btn btn-warning pull-right"
+				(click)="onToggleMaintenanceMode()">
+					Toggle Maintenance Mode
 				</button>
 			</div>
 			<hr/>
 		</div>
 		<div class="col-xs-12 col-md-6">
 			<form-group [label]="'URL'"
-						[value]="app.webUrl"
+						[value]="app.web_url"
 						[readOnly]="true">
 			</form-group>
 			<form-group [label]="'Last Release Date'"
-						[value]="app.releasedAt | date:'EEEE, MMMM dd, yyyy, h:mm:ss a'"
+						[value]="app.released_at | date:'EEEE, MMMM dd, yyyy, h:mm:ss a'"
 						[readOnly]="true">
 			</form-group>
+		</div>
+		<div class="col-xs-12 col-md-6">
+			<panel id="releases-panel"
+				   [title]="'Releases'">
+				<panel-body>
+					<div *ngFor="let release of releases"
+						 class="release">
+						<span class="version">v{{release.version}}</span><span class="date">{{release.created_at | date:'MM/dd/yyyy, h:mm:ss a'}}</span><span class="description">{{release.description}}</span>
+						<button class="btn btn-default pull-right">Info</button>
+					</div>
+				</panel-body>
+			</panel>
 		</div>
 	</div>
 </div>

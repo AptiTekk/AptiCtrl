@@ -1,0 +1,40 @@
+/*
+ * Copyright (C) 2016 AptiTekk, LLC. (https://AptiTekk.com/) - All Rights Reserved
+ * Unauthorized copying of any part of AptiCtrl, via any medium, is strictly prohibited.
+ * Proprietary and confidential.
+ */
+
+:host /deep/ #releases-panel .panel-body {
+    height: 400px;
+    overflow-y: auto;
+}
+
+.release {
+    border: 1px solid #eee;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.release .version {
+    display: inline-block;
+    padding: 10px;
+    background-color: #ddd;
+    border-radius: 3px 0 0 3px;
+    font-weight: bold;
+}
+
+.release .date {
+    display: inline-block;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #eee;
+    width: 200px;
+}
+
+.release .description {
+    overflow: hidden;
+}
+
+.release .btn {
+    margin: 3px;
+}

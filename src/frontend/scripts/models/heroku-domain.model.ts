@@ -6,18 +6,17 @@
 
 export interface HerokuDomain {
 
-    id?: string;
-
     createdAt?: string;
 
     updatedAt?: string;
 
-    defaultName?: string;
+    hostname?: string;
 
-    domain?: string;
+    id?: string;
 
-    appId?: string;
+    kind?: string;
 
-    baseDomain?: string;
+    status?: string;
 
+    cname?: string;
 }

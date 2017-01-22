@@ -20,21 +20,21 @@
 			<panel class="heroku-app-panel">
 				<panel-body>
 					<h4 class="app-title">{{app.name}}</h4>
-					<span *ngIf="app.maintenanceModeStatus === false"
+					<span *ngIf="!app.maintenance"
 						  class="label label-success pull-right status-label">
                         Live
                     </span>
-					<span *ngIf="app.maintenanceModeStatus === true"
+					<span *ngIf="app.maintenance"
 						  class="label label-warning pull-right status-label">
                         Maintenance Mode Enabled
                     </span>
 					<hr/>
 					<form-group [label]="'URL'"
-								[value]="app.webUrl"
+								[value]="app.web_url"
 								[readOnly]="true">
 					</form-group>
 					<form-group [label]="'Last Release Date'"
-								[value]="app.releasedAt | date:'EEEE, MMMM dd, yyyy, h:mm:ss a'"
+								[value]="app.released_at | date:'EEEE, MMMM dd, yyyy, h:mm:ss a'"
 								[readOnly]="true">
 					</form-group>
 				</panel-body>
