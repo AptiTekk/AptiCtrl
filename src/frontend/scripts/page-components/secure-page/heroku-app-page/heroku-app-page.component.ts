@@ -9,6 +9,8 @@ import {HerokuApp} from "../../../models/heroku-app.model";
 import {HerokuService} from "../../../services/singleton/heroku.service";
 import {HerokuRelease} from "../../../models/heroku-release.model";
 import {LoaderService} from "../../../services/singleton/loader.service";
+import {Observable} from "rxjs";
+import {HerokuDyno} from "../../../models/heroku-dyno.model";
 
 @Component({
     selector: 'heroku-app-page',
@@ -19,6 +21,7 @@ export class HerokuAppPageComponent implements OnInit {
 
     app: HerokuApp;
     releases: HerokuRelease[];
+    dynos: HerokuDyno[];
 
     constructor(private activatedRoute: ActivatedRoute,
                 private herokuService: HerokuService,
@@ -36,18 +39,15 @@ export class HerokuAppPageComponent implements OnInit {
                 let appName: string = params['appName'];
 
                 if (appName) {
-                    this.herokuService.getAppByName(appName).subscribe(
-                        app => {
-                            this.app = app;
-                            this.herokuService
-                                .getAppReleases(appName)
-                                .subscribe(
-                                    releases => {
-                                        this.releases = releases.reverse();
-                                        this.loaderService.stopLoading();
-                                    }
-                                )
-                        });
+                    Observable.zip(this.herokuService.getAppByName(appName), this.herokuService.getAppReleases(appName), this.herokuService.getAppDynos(appName))
+                        .subscribe(
+                            value => {
+                                this.app = value[0];
+                                this.releases = value[1].reverse();
+                                this.dynos = value[2];
+                                this.loaderService.stopLoading();
+                            }
+                        );
                 }
             }
         )

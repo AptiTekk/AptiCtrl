@@ -116,4 +116,17 @@ public class HerokuController extends APIControllerAbstract {
         return serverError();
     }
 
+    @RequestMapping(value = "/heroku/apps/{name}/dynos", method = RequestMethod.GET)
+    public ResponseEntity<?> getAppDynos(@PathVariable String name) {
+        if (!authService.isUserSignedIn())
+            return unauthorized();
+
+        String dynos = getHeroku("apps/" + name + "/dynos");
+
+        if (dynos != null)
+            return ok(dynos);
+
+        return serverError();
+    }
+
 }

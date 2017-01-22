@@ -12,12 +12,12 @@
 	
 	<div class="page-header">
 		<h2>{{app?.name}}
-			<span *ngIf="!app?.maintenance"
+			<span *ngIf="app?.maintenance === false"
 				  class="label label-success"
 				  style="margin-left: 20px">
                 Live
             </span>
-			<span *ngIf="app?.maintenance"
+			<span *ngIf="app?.maintenance === true"
 				  class="label label-warning"
 				  style="margin-left: 20px">
                 Maintenance Mode Enabled
@@ -40,7 +40,7 @@
 			</div>
 			<hr/>
 		</div>
-		<div class="col-xs-12 col-md-6">
+		<div class="col-xs-12 col-md-3">
 			<form-group [label]="'URL'"
 						[value]="app.web_url"
 						[readOnly]="true">
@@ -49,6 +49,11 @@
 						[value]="app.released_at | date:'EEEE, MMMM dd, yyyy, h:mm:ss a'"
 						[readOnly]="true">
 			</form-group>
+		</div>
+		<div class="col-xs-12 col-md-3">
+			<div *ngFor="let dyno of dynos" class="dyno">
+				{{dyno.name}} / {{dyno.command}} / {{dyno.state}}
+			</div>
 		</div>
 		<div class="col-xs-12 col-md-6">
 			<panel id="releases-panel"

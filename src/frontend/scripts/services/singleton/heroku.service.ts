@@ -8,6 +8,7 @@ import {APIService} from "./api.service";
 import {HerokuApp} from "../../models/heroku-app.model";
 import {ReplaySubject, Observable} from "rxjs";
 import {HerokuRelease} from "../../models/heroku-release.model";
+import {HerokuDyno} from "../../models/heroku-dyno.model";
 
 @Injectable()
 export class HerokuService {
@@ -103,4 +104,21 @@ export class HerokuService {
                 )
         });
     }
+
+    /**
+     * Gets an app's dynos from the server.
+     * @param name The name of the app to get dynos from.
+     * @returns A list of dynos, or an empty array if there was an error.
+     */
+    public getAppDynos(name: string): Observable<HerokuDyno[]> {
+        return Observable.create(listener => {
+            this.apiService
+                .get("heroku/apps/" + name + "/dynos")
+                .subscribe(
+                    dynos => listener.next(dynos),
+                    err => listener.next([])
+                )
+        });
+    }
+
 }
